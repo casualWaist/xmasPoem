@@ -1,0 +1,156 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: #F2FFE9;
+    background-color: #557C55;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#app{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+
+#start{
+    width: 50%;
+    height: 50%;
+    display: grid;
+    position: absolute;
+    left: 12.5%;
+    top: 12.5%
+}
+
+input{
+    box-sizing: border-box;
+    font-size: 4vw;
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+
+#errorPlace{
+    color: #F2FFE9;
+    top: 70%;
+}
+
+#story{
+    position: absolute;
+    height: 3000%;
+    display: grid;
+    gap: 60vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    top: 0;
+    left: 0;
+    width: 85%;
+}
+
+#story p{
+    color: #F2FFE9;
+    padding: 5%;
+    background: #557C55;
+    height: 1.5rem;
+    border-radius: 0 50% 50% 0;
+    font-size: 3vw;
+}
+
+.twoLines{
+    height: 2rem;
+}
+
+.threeLines{
+    height: 2.5rem;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.4em 1em;
+    font-size: 4vw;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #557C55;
+    color: #F2FFE9;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #A6CF98;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.downArrows{
+    left: 60%;
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0;
+}
+#downT{
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    top: 7rem;
+    position: absolute;
+    border-width: 0 0.25em 0.25em 0;
+    border-style: solid;
+    border-color: #DB6B97;
+    animation: scrolldown 1.7s ease-in-out infinite 3.15s;
+}
+#downB{
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    top: 8rem;
+    position: absolute;
+    border-width: 0 0.25em 0.25em 0;
+    border-style: solid;
+    border-color: #A6CF98;
+    animation: scrolldown 1.7s ease-in-out infinite 3s;
+}
+@keyframes scrolldown {
+    0%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@media  only screen and (max-width: 430px) {
+    button{
+    }
+    input{
+    }
+}
+
